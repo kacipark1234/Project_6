@@ -1,0 +1,40 @@
+CREATE DATABASE `Portfolio_6`;
+USE `Portfolio_6`; 
+
+
+CREATE TABLE `album`(     
+    `id` int primary key,
+    `name` VARCHAR(256),  
+    `owner` VARCHAR(32)
+);
+CREATE TABLE `photo`(     
+    `id` int auto_increment primary key,
+    `name` VARCHAR(64),  
+    `filename` VARCHAR(64),  
+    `comment` VARCHAR(512),  
+    `album_id` int
+);
+CREATE TABLE `users`(     
+    `account` VARCHAR(32) primary key,
+    `password` VARCHAR(32),  
+    `name` VARCHAR(32)
+);
+
+INSERT INTO album(id,name,owner) VALUES(1,'相簿1','123');
+INSERT INTO album(id,name,owner) VALUES(2,'相簿2','123');
+INSERT INTO album(id,name,owner) VALUES(3,'相簿3','111');
+INSERT INTO photo(name,filename,comment,album_id) VALUES('1號','001.png','這是1號',1);
+INSERT INTO photo(name,filename,comment,album_id) VALUES('2號','002.png','這是2號',1);
+INSERT INTO photo(name,filename,comment,album_id) VALUES('3號','003.png','這是3號',1);
+INSERT INTO photo(name,filename,comment,album_id) VALUES('1號','001.png','這是1號',3);
+INSERT INTO photo(name,filename,comment,album_id) VALUES('2號','002.png','這是2號',3);
+
+INSERT INTO users(account,password,name) VALUES('123','123','楊');
+INSERT INTO users(account,password,name) VALUES('111','123','陳');
+
+UPDATE `photo` SET name = '1號' where id = 1;           
+SELECT a.name , a.filename , a.comment , a.album_id , b.name AS album_name , b.owner 
+FROM photo AS a , album AS b WHERE a.id = 1 AND b.id = a.album_id;';	
+
+UPDATE `album` SET name = '相簿2' where id = 2;
+SELECT id,album_id, filename FROM photo WHERE album_id = (SELECT id FROM album WHERE id = 1);
