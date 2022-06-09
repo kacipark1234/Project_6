@@ -7,6 +7,21 @@
 2. 瀏覽/新增/刪除/修改相簿
 3. 瀏覽/上傳/刪除/修改相片
 
+檔案介紹: 
+AddAlbum.php	新增相簿  
+addUser.php     註冊帳號  
+dbtools.inc.php 連接資料庫  
+deleteAlbum.php	刪除相簿  
+deletePhoto.php 刪除相片  
+edit.php	    編輯相簿畫面  
+editPhoto.php   編輯相片畫面  
+index.php       相簿主頁  
+login.php       登入  
+logout.php      登出  
+photoDetail.php 顯示相片  
+showAlbum.php	顯示相簿列表  
+uploadPhoto.php 上傳相片  
+
 ## 登入(login.php)
 在資料庫中查詢帳號密碼是否正確
 ![image](https://user-images.githubusercontent.com/93324400/172579966-6a654b0b-6f47-4f40-871b-dc8e8df103bf.PNG)
