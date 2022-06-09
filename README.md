@@ -7,7 +7,7 @@
 2. 瀏覽/新增/刪除/修改相簿
 3. 瀏覽/上傳/刪除/修改相片
 
-檔案介紹: 
+檔案介紹:  
 AddAlbum.php	新增相簿  
 addUser.php     註冊帳號  
 dbtools.inc.php 連接資料庫  
